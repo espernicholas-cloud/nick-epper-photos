@@ -1,0 +1,30 @@
+<!-- Top nav with dropdowns -->
+<nav style="background:#111;padding:1rem;font-family:Inter,sans-serif;">
+  <a href="index.html" style="color:#f5c445;font-weight:bold;margin-right:2rem;">Home</a>
+
+  <!-- Sports dropdown -->
+  <div style="display:inline-block;position:relative;margin-right:2rem;">
+    <button style="background:none;border:none;color:#fff;font-size:1rem;cursor:pointer;">Sports ▾</button>
+    <div style="display:none;position:absolute;background:#222;min-width:160px;z-index:1;">
+      <a href="sports.html" style="color:#fff;padding:.75rem 1rem;display:block;">Gallery</a>
+      <a href="book.html?sport=sports" style="color:#fff;padding:.75rem 1rem;display:block;">Book Sports</a>
+    </div>
+  </div>
+
+  <!-- Portraits dropdown -->
+  <div style="display:inline-block;position:relative;">
+    <button style="background:none;border:none;color:#fff;font-size:1rem;cursor:pointer;">Portraits ▾</button>
+    <div style="display:none;position:absolute;background:#222;min-width:160px;z-index:1;">
+      <a href="portraits.html" style="color:#fff;padding:.75rem 1rem;display:block;">Gallery</a>
+      <a href="book.html?type=portraits" style="color:#fff;padding:.75rem 1rem;display:block;">Book Portraits</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+// open/close dropdowns
+document.querySelectorAll('nav div').forEach(d=>{
+  d.addEventListener('mouseenter',()=>d.querySelector('div').style.display='block');
+  d.addEventListener('mouseleave',()=>d.querySelector('div').style.display='none');
+});
+</script>
